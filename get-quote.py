@@ -2,14 +2,18 @@ import random
 
 def primary():
 
-  f = open("quotes.txt")
+  f = open("quotes.txt", "r")
   quotes = f.readlines()
   f.close()
 
-  last = 13
-  rnd = random.randint(0, last)
+  f = open("quotes.txt", "a")
+  f.write("New quote")
+  f.close()
 
-  print(quotes[rnd])
+  last = 14
+  rnd1 = random.randint(0, last)
+
+  print(quotes[rnd1], end='')
 
 if __name__== "__main__":
  primary()
